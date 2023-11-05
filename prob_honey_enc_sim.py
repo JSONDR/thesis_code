@@ -128,7 +128,7 @@ def interpretation_error(n_samples, actual_dist, decoy_dist):
     error = (total_diff / n_samples) * 100
     print("Interpretation error: {}%".format(round(error, 2)))
     
-def section_6_4_example(N, o_0, o_0_hat):
+def section_5_3_example(N, o_0, o_0_hat):
     samples = generate_samples(N)
     print("Actual distribution")
     seeds = encode(samples)
@@ -210,4 +210,4 @@ def section_6_4_example(N, o_0, o_0_hat):
 o_0 = '01' # chain of OTPs seed
 o_0_hat = '00' # Adversaries guess at the seed
 N = int(input("Number of messages sampled from Y: "))
-section_6_4_example(N, o_0, o_0_hat)
+section_5_3_example(N, o_0, o_0_hat)
