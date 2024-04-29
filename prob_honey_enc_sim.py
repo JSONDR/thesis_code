@@ -1,6 +1,8 @@
 import random as rand
 import hashlib
 
+# when one constructs a thesis in 5 days, from birth of an idea, to typesetting and coding, trivial typographical errors are inevitable
+
 def chain_of_otps(o_0, n_samples):
     chain = [o_0]
     hash_object = hashlib.sha256()
