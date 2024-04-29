@@ -1,7 +1,7 @@
 import random as rand
 import hashlib
 
-def chain_of_opts(o_0, n_samples):
+def chain_of_otps(o_0, n_samples):
     chain = [o_0]
     hash_object = hashlib.sha256()
     i = 1
@@ -148,7 +148,7 @@ def section_5_3_example(N, o_0, o_0_hat):
         print(key + " : " + str(counters[key]))
     actual_dist = counters
 
-    o_chain = chain_of_opts(o_0, N)
+    o_chain = chain_of_otps(o_0, N)
     i = 0
     ciphertext_chain = []
     for s in seeds:
@@ -158,7 +158,7 @@ def section_5_3_example(N, o_0, o_0_hat):
 
     print("A decoy distribution (what an adversary sees)")
     seeds = []
-    in_chain = chain_of_opts(o_0_hat, N)
+    in_chain = chain_of_otps(o_0_hat, N)
     i = 0
     for c in ciphertext_chain:
         seeds.append(OTP(c, in_chain[i]))
